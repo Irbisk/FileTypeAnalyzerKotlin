@@ -1,0 +1,16 @@
+<h2>Exception in thread</h2>
+<div class="step-text">
+<p></p>
+<p>What happens after launching the following code?</p>
+<pre><code class="language-kotlin">fun main() {
+    val thread = thread(name = "secondary", start = false, block = {
+        val str: String? = null
+        println("Length is ${str!!.length}")
+    })
+    thread.start()
+    while (true) {
+        // do nothing
+    }
+}
+</code></pre>
+</div>
